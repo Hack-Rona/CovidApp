@@ -1,26 +1,27 @@
 .button {
-    color: white;
-    border-color: black;
-    border-radius: 5px;
+	color: white;
+	border-color: #ba5c12;
+	border-radius: 5px;
 }
 
 .button:hover {
-    color: black;
+	background-color: #ba5c12;
+	color: white;
 }
 
 .top-panel {
-    background-color: #87bcde;
+	background-color: #87bcde;
 }
 
 .middle-panel {
-    background-color: white;
+	background-color: white;
 }
 
 .bottom-panel {
-    background-color: #87bcde;
+	background-color: #87bcde;
 }
 
 .panel-image {
-    max-width: 200px;
-    max-height: 200px;
+	max-width: 200px;
+	max-height: 200px;
 }
