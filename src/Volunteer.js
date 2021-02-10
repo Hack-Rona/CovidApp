@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Dropdown } from 'react-bootstrap';
 import { APIURL } from './config';
+import Navie from './Navie';
 
 function Volunteer(props) {
 	const [error, setError] = useState(false);
 	const [volunteer, setVolunteer] = useState({
-		firstName: '',
-		lastName: '',
-		email: '',
-		phoneNumber: '',
+		name: '',
+		city: '',
+		state: '',
 		zipCode: '',
+		phoneNumber: '',
+		email: '',
+		helpNum: '',
+		vaccinated: '',
+		testDate: '',
+		okInPerson: '',
 	});
 
 	const handleChange = (event) => {
@@ -54,6 +60,7 @@ function Volunteer(props) {
 
 	return (
 		<Container>
+			<Navie path='/navbar' component={Navie} />
 			<h2>Volunteer Form</h2>
 			<h6>This information will be kept confidential</h6>
 			<Form onSubmit={handleSubmit}>
@@ -442,6 +449,7 @@ function Volunteer(props) {
 						</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown>
+				<h5>State selected: {volunteer.state}</h5>
 				<Form.Group controlId='zip'>
 					<Form.Label>Zip Code</Form.Label>
 					<Form.Control
@@ -473,7 +481,7 @@ function Volunteer(props) {
 				</Form.Group>
 
 				<Dropdown>
-					<Form.Label>State</Form.Label>
+					<Form.Label>How many people do you want to help per week?</Form.Label>
 					<br />
 					<Dropdown.Toggle></Dropdown.Toggle>
 
@@ -548,8 +556,46 @@ function Volunteer(props) {
 							onSelect={handleSelect}>
 							10
 						</Dropdown.Item>
+						<Dropdown.Item
+							eventKey='10+'
+							type='helpNum'
+							name='helpNum'
+							onSelect={handleSelect}>
+							10+
+						</Dropdown.Item>
 					</Dropdown.Menu>
 				</Dropdown>
+				<br />
+
+				<h6>Have you been vaccinated?</h6>
+				<div onChange={handleChange}>
+					<input type='radio' id='no' name='vaccinated' value='no' />
+					<label htmlFor='no'>No</label>
+					<br />
+					<input type='radio' id='yes' name='vaccinated' value='yes' />
+					<label htmlFor='yes'>Yes</label>
+					<br />
+				</div>
+
+				<Form.Group controlId='testDate'>
+					<Form.Label>When was the date of your last COVID testing?</Form.Label>
+					<Form.Control
+						type='testDate'
+						name='testDate'
+						placeholder='Date of Test'
+						onChange={handleChange}
+					/>
+				</Form.Group>
+
+				<h6>Would you be comfortable doing an in-person volunteer?</h6>
+				<div onChange={handleChange}>
+					<input type='radio' id='no' name='okInPerson' value='no' />
+					<label htmlFor='no'>No</label>
+					<br />
+					<input type='radio' id='yes' name='okInPerson' value='yes' />
+					<label htmlFor='yes'>Yes</label>
+					<br />
+				</div>
 
 				<Button variant='primary' type='submit'>
 					Submit

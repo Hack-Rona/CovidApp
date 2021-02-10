@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Dropdown } from 'react-bootstrap';
 import { APIURL } from './config';
+import Navie from './Navie';
 
 function Senior(props) {
 	const [error, setError] = useState(false);
@@ -57,6 +58,7 @@ function Senior(props) {
 
 	return (
 		<Container>
+			<Navie path='/navbar' component={Navie} />
 			<h2>Tell us about you</h2>
 			<h6>This information will be kept confidential</h6>
 			<Form onSubmit={handleSubmit}>
