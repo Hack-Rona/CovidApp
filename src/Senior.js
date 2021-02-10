@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Form, Button, Container, Dropdown } from 'react-bootstrap';
 import { APIURL } from './config';
+import Navie from './Navie';
 
 function Senior(props) {
 	const [error, setError] = useState(false);
@@ -11,6 +12,8 @@ function Senior(props) {
 		zipCode: '',
 		phoneNumber: '',
 		email: '',
+		help: '',
+		contact: '',
 	});
 
 	const handleChange = (event) => {
@@ -55,6 +58,7 @@ function Senior(props) {
 
 	return (
 		<Container>
+			<Navie path='/navbar' component={Navie} />
 			<h2>Tell us about you</h2>
 			<h6>This information will be kept confidential</h6>
 			<Form onSubmit={handleSubmit}>
@@ -83,7 +87,7 @@ function Senior(props) {
 					<br />
 					<Dropdown.Toggle></Dropdown.Toggle>
 
-					<Dropdown.Menu>
+					<Dropdown.Menu style={{ maxHeight: '20em', overflowY: 'scroll' }}>
 						<Dropdown.Item
 							eventKey='AL'
 							type='state'
@@ -473,6 +477,31 @@ function Senior(props) {
 					/>
 				</Form.Group>
 
+				<h6>What type of help are you looking for?</h6>
+				<div onChange={handleChange}>
+					<input type='radio' id='settingUp' name='help' value='settingUp' />
+					<label htmlFor='settingUp'>
+						I need help setting up a vaccination
+					</label>
+					<br />
+					<input type='radio' id='driveMe' name='help' value='driveMe' />
+					<label htmlFor='driveMe'>
+						I need help getting to a vaccination appointment
+					</label>
+					<br />
+					<input type='radio' id='both' name='help' value='both' />
+					<label htmlFor='both'>Both</label>
+					<br />
+				</div>
+				<h6>What is your preferred contact method?</h6>
+				<div onChange={handleChange}>
+					<input type='radio' id='phone' name='contact' value='phone' />
+					<label htmlFor='phone'>Phone</label>
+					<br />
+					<input type='radio' id='email' name='contact' value='email' />
+					<label htmlFor='email'> E-mail</label>
+					<br />
+				</div>
 				<Button variant='primary' type='submit'>
 					Submit
 				</Button>
