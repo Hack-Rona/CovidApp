@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navbar, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import { Navbar, Nav} from 'react-bootstrap';
 
-function Navie(props) {
+function Navie() {
     return (
 			<Navbar bg='light' expand='lg'>
 				<Navbar.Brand href='#home'>Nav Bar</Navbar.Brand>
@@ -11,7 +11,6 @@ function Navie(props) {
 						<Nav.Link href='/'>Home</Nav.Link>
 						<Nav.Link href='/senior'>Get Help</Nav.Link>
 						<Nav.Link href='/volunteer'>Volunteer</Nav.Link>
-						<Nav.Link href='/news'>News Feed</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
