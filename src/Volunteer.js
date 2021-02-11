@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import { Form, Button, Container, Dropdown } from 'react-bootstrap';
-import { APIURL } from './config';
-import Navie from './Navie';
-import './Volunteer.css';
-import worksvolunteer from './images/howthisworksvolunteer.svg'
-import fillform from './images/fillformbelow.svg';
-import allset from './images/allsetman.svg';
-import Footer from './Footer'
+import React, { useState } from "react";
+import { Form, Button, Container, Dropdown } from "react-bootstrap";
+import { APIURL } from "./config";
+import Navie from "./Navie";
+import "./Volunteer.css";
+import worksvolunteer from "./images/howthisworksvolunteer.svg";
+import fillform from "./images/fillformbelow.svg";
+import allset from "./images/allsetman.svg";
+import Footer from "./Footer";
 
 function Volunteer(props) {
 	const [error, setError] = useState(false);
@@ -22,15 +22,15 @@ function Volunteer(props) {
 		date: '',
 		inperson: '',
 	});
-
-	const handleChange = (event) => {
-		event.persist();
-		setVolunteer({
-			...volunteer,
-			[event.target.name]: event.target.value,
-		});
-	};
-
+  
+  const handleChange = (event) => {
+    event.persist();
+    setVolunteer({
+      ...volunteer,
+      [event.target.name]: event.target.value,
+    });
+  };
+  
 	// const handleSelect = (event) => {
 	// 	setVolunteer({
 	// 		...volunteer,
@@ -101,15 +101,15 @@ function Volunteer(props) {
 						/>
 					</Form.Group>
 
-					<Form.Group controlId='city'>
-						<Form.Label>City</Form.Label>
-						<Form.Control
-							type='city'
-							name='city'
-							placeholder='Enter City'
-							onChange={handleChange}
-						/>
-					</Form.Group>
+          <Form.Group controlId="city">
+            <Form.Label>City</Form.Label>
+            <Form.Control
+              type="city"
+              name="city"
+              placeholder="Enter City"
+              onChange={handleChange}
+            />
+          </Form.Group>
 
 					<Form.Group controlId='state'>
 						<Form.Label>State</Form.Label>
@@ -509,15 +509,15 @@ function Volunteer(props) {
 						/>
 					</Form.Group>
 
-					<Form.Group controlId='formBasicEmail'>
-						<Form.Label>Email address</Form.Label>
-						<Form.Control
-							type='email'
-							name='email'
-							placeholder='Enter email'
-							onChange={handleChange}
-						/>
-					</Form.Group>
+          <Form.Group controlId="formBasicEmail">
+            <Form.Label>Email address</Form.Label>
+            <Form.Control
+              type="email"
+              name="email"
+              placeholder="Enter email"
+              onChange={handleChange}
+            />
+          </Form.Group>
 
 					{/* <Dropdown>
 						<Form.Label>
@@ -652,15 +652,15 @@ function Volunteer(props) {
 						<br />
 					</div>
 
-					<button className='button' type='submit'>
-						Submit
-					</button>
-				</Form>
-			</Container>
-			<br></br>
-			<Footer path='/footer' component={Footer} />
-		</div>
-	);
+          <button className="button" type="submit">
+            Submit
+          </button>
+        </Form>
+      </Container>
+      <br></br>
+      <Footer path="/footer" component={Footer} />
+    </div>
+  );
 }
 
 export default Volunteer;
