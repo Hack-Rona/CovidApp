@@ -68,22 +68,22 @@ function Senior(props) {
 			<div>
 				<Navie path='/navbar' component={Navie} />
 			</div>
-				<div className='top-panel'>
-					<p>How this works</p>
-					<img className='panel-image' src={worksrecipient}></img>
-					<p>
-						You are eligible for the vaccination, but are having difficulties.
-					</p>
-				</div>
-				<div className='panel-image' className='middle-panel'>
-					<img src={fillform}></img>
-					<p>Fill the form below to get started.</p>
-				</div>
-				<div className='bottom-panel'>
-					<img className='panel-image' src={allset}></img>
-					<p>All set! Someone will be in touch in 1 to 3 days.</p>
-				</div>
-				<br></br>
+			<div className='top-panel'>
+				<p>How this works</p>
+				<img className='panel-image' src={worksrecipient}></img>
+				<p>
+					You are eligible for the vaccination, but are having difficulties.
+				</p>
+			</div>
+			<div className='panel-image' className='middle-panel'>
+				<img src={fillform}></img>
+				<p>Fill the form below to get started.</p>
+			</div>
+			<div className='bottom-panel'>
+				<img className='panel-image' src={allset}></img>
+				<p>All set! Someone will be in touch in 1 to 3 days.</p>
+			</div>
+			<br></br>
 			<Container>
 				<h2>Tell us about you</h2>
 				<h6>This information will be kept confidential</h6>
@@ -108,7 +108,17 @@ function Senior(props) {
 						/>
 					</Form.Group>
 
-					<Dropdown>
+					<Form.Group controlId='state'>
+						<Form.Label>State</Form.Label>
+						<Form.Control
+							type='state'
+							name='state'
+							placeholder='Enter State'
+							onChange={handleChange}
+						/>
+					</Form.Group>
+
+					{/* <Dropdown>
 						<Form.Label>State</Form.Label>
 						<br />
 						<Dropdown.Toggle></Dropdown.Toggle>
@@ -472,7 +482,7 @@ function Senior(props) {
 								WY
 							</Dropdown.Item>
 						</Dropdown.Menu>
-					</Dropdown>
+					</Dropdown> */}
 					<Form.Group controlId='zip'>
 						<Form.Label>Zip Code</Form.Label>
 						<Form.Control
@@ -534,7 +544,7 @@ function Senior(props) {
 				</Form>
 				<br></br>
 			</Container>
-				<Footer path='/footer' component={Footer} />
+			<Footer path='/footer' component={Footer} />
 		</div>
 	);
 }
