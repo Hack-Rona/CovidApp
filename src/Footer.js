@@ -8,8 +8,8 @@ function Footer() {
 			<p className='logo'>COV-AID</p>
 			<a href='#topper'>
 				<img src={arrow} className='arrow' alt='up arrow' />
-				<br />
-				<br />
+				
+				
 				<p className='top'>Top</p>
 			</a>
 		</div>
