@@ -6,6 +6,7 @@ import './Senior.css';
 import worksrecipient from './images/howthisworksrecipient.svg';
 import fillform from './images/fillformbelow.svg';
 import allset from './images/allsetman.svg';
+import Footer from './Footer';
 
 function Senior(props) {
 	const [error, setError] = useState(false);
@@ -66,7 +67,9 @@ function Senior(props) {
 			<div className='top-panel'>
 				<p>How this works</p>
 				<img className='panel-image' src={worksrecipient}></img>
-				<p>You are eligible for the vaccination, but are having difficulties.</p>
+				<p>
+					You are eligible for the vaccination, but are having difficulties.
+				</p>
 			</div>
 			<div className='panel-image' className='middle-panel'>
 				<img src={fillform}></img>
@@ -520,10 +523,12 @@ function Senior(props) {
 					<label htmlFor='email'> E-mail</label>
 					<br />
 				</div>
-				<Button className='button' type='submit'>
+				<button className='button' type='submit'>
 					Submit
-				</Button>
+				</button>
 			</Form>
+			<br></br>
+			<Footer path='/footer' component={Footer} />
 		</Container>
 	);
 }
