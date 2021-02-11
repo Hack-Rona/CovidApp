@@ -11,6 +11,7 @@
 
 .top-panel {
 	flex: auto;
+	padding: 1rem, 10rem, 1rem, 1rem;
 	background-color: #87bcde;
 }
 
@@ -29,7 +30,12 @@
 	max-height: 200px;
 }
 
+h2 {
+	text-align: center;
+}
+
 p {
+	
 	text-align: center;
 }
 
@@ -38,4 +44,3 @@ img {
 	margin: auto;
 	display: block;
 }
-
