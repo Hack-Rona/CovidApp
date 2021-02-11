@@ -14,7 +14,7 @@
 }
 
 .linkButton1 {
-    background-color: rgb(216, 114, 5);
+    background-color: rgb(173, 82, 2);
     color: white;
     border-radius: 5%;
     border: none;
@@ -24,7 +24,7 @@
 }
 
 .linkButton2 {
-    background-color: rgb(216, 114, 5);
+    background-color: rgb(173, 82, 2);
     color: white;
     border-radius: 5%;
     border: none;
@@ -55,5 +55,5 @@
     font-size: 0.8em;
     font-weight: 700;
     text-align: center;
-    padding: 0 3em;
+    padding: 0 3em 10em;
 }

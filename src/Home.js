@@ -4,6 +4,7 @@ import { Button, Container } from 'react-bootstrap';
 import Carousel from './components/Carousel';
 import CarouselData from './components/CarouselData';
 import Navie from './Navie';
+import Footer from './Footer';
 import './components/Carousel.css';
 import './Home.css';
 import womanClipboard from './images/womanClipboard.svg';
@@ -73,6 +74,7 @@ function Home(props) {
 					volunteer was Maria L.
 				</p>
 			</div>
+			<Footer path='/footer' component={Footer}/>
 		</div>
 	);
 }
