@@ -35,6 +35,9 @@ const Carousel = ({ slides }) => {
                   alt="article image"
                   className="image"
                 />
+                <h3 className="center">{slide.title}</h3>
+                <p className="center">{slide.description}</p>
+                <p className="center">{slide.name} </p>
               </a>
             )}
           </div>
