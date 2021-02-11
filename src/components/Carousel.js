@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import CarouselData from "./CarouselData";
-import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
@@ -20,8 +20,8 @@ const Carousel = ({ slides }) => {
 
   return (
     <section className="slider">
-      <FaArrowAltCircleLeft className="left-arrow" onClick={prevSlide} />
-      <FaArrowAltCircleRight className="right-arrow" onClick={nextSlide} />
+      <FaChevronLeft className="left-arrow" onClick={prevSlide} />
+      <FaChevronRight className="right-arrow" onClick={nextSlide} />
       {CarouselData.map((slide, index) => {
         return (
           <div
@@ -29,7 +29,13 @@ const Carousel = ({ slides }) => {
             key={index}
           >
             {index === current && (
-              <img src={slide.image} alt="testimony image" className="image" />
+              <a href={slide.url} target="blank">
+                <img
+                  src={slide.urlToImage}
+                  alt="article image"
+                  className="image"
+                />
+              </a>
             )}
           </div>
         );
