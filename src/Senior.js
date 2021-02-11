@@ -54,10 +54,12 @@ function Senior(props) {
 				console.log(data);
 				setSenior(data);
 				console.log(senior);
+				window.location = '/seniorconfirmation';
 			})
 			.catch(() => {
 				console.log('Error:', error);
 				setError(true);
+				window.location = '/seniorconfirmation';
 			});
 	};
 
