@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 .slider {
   position: relative;
@@ -49,6 +51,7 @@
 p {
   color: black;
   font-family: "Open Sans";
+  font-weight: normal;
   font-size: 150%;
 }
 
@@ -64,15 +67,26 @@ a:hover {
 }
 
 h3 {
-  display: flex;
   color: black;
   font-family: "Open Sans";
+  font-weight: bold;
   font-size: 150%;
 }
 
-.center {
+.headline {
   margin: auto;
   width: 50%;
+  font-family: "Open Sans";
+  font-weight: bold;
   padding: 10px;
   font-size: 80%;
+}
+
+.content {
+  margin: auto;
+  width: 50%;
+  font-family: "Open Sans";
+  font-weight: normal;
+  padding: 10px;
+  font-size: 70%;
 }
