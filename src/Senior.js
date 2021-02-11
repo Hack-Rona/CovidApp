@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import { Form, Button, Container, Dropdown } from 'react-bootstrap';
 import { APIURL } from './config';
 import Navie from './Navie';
+import './Senior.css';
+import worksrecipient from './images/howthisworksrecipient.svg';
+import fillform from './images/fillformbelow.svg';
+import allset from './images/allsetman.svg';
 
 function Senior(props) {
 	const [error, setError] = useState(false);
@@ -59,6 +63,20 @@ function Senior(props) {
 	return (
 		<Container>
 			<Navie path='/navbar' component={Navie} />
+			<div className='top-panel'>
+				<p>How this works</p>
+				<img className='panel-image' src={worksrecipient}></img>
+				<p>You are eligible for the vaccination, but are having difficulties.</p>
+			</div>
+			<div className='panel-image' className='middle-panel'>
+				<img src={fillform}></img>
+				<p>Fill the form below to get started.</p>
+			</div>
+			<div className='bottom-panel'>
+				<img className='panel-image' src={allset}></img>
+				<p>All set! Someone will be in touch in 1 to 3 days.</p>
+			</div>
+			<br></br>
 			<h2>Tell us about you</h2>
 			<h6>This information will be kept confidential</h6>
 			<Form onSubmit={handleSubmit}>
@@ -502,7 +520,7 @@ function Senior(props) {
 					<label htmlFor='email'> E-mail</label>
 					<br />
 				</div>
-				<Button variant='primary' type='submit'>
+				<Button className='button' type='submit'>
 					Submit
 				</Button>
 			</Form>

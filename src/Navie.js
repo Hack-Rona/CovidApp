@@ -1,10 +1,15 @@
 import React from 'react';
-import { Navbar, Nav} from 'react-bootstrap';
+import { Navbar, Nav } from 'react-bootstrap';
+import './Navie.css';
+import logo from './images/COVAIDLogo.png';
 
 function Navie() {
-    return (
-			<Navbar bg='light' expand='lg'>
-				<Navbar.Brand href='#home'>Nav Bar</Navbar.Brand>
+	return (
+		<div className='top'>
+			<Navbar expand='lg'>
+				<Navbar.Brand href='#home'>
+					<img src={logo} />
+				</Navbar.Brand>
 				<Navbar.Toggle aria-controls='basic-navbar-nav' />
 				<Navbar.Collapse id='basic-navbar-nav'>
 					<Nav className='mr-auto'>
@@ -14,7 +19,8 @@ function Navie() {
 					</Nav>
 				</Navbar.Collapse>
 			</Navbar>
-		);
+		</div>
+	);
 }
 
 export default Navie;
