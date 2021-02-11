@@ -4,7 +4,11 @@
 }
 
 .foot {
-    background-color: yellow;
+    background-color: #e0ca3c;
     display: inline-block;
     width: 100%;
+}
+
+.logo {
+    align-items: left;
 }
