@@ -1,0 +1,59 @@
+.imgContainer {
+    background-color: rgb(251, 200, 209);
+    text-align: center;
+    justify-items: center;
+    padding: 2em 0;
+}
+
+.image {
+    padding-bottom: 1em;
+}
+
+.info {
+    padding: 0 15%;
+}
+
+.linkButton1 {
+    background-color: rgb(216, 114, 5);
+    color: white;
+    border-radius: 5%;
+    border: none;
+    width:50%;
+    padding: 1em;
+    margin: 1em 2em 2em;
+}
+
+.linkButton2 {
+    background-color: rgb(216, 114, 5);
+    color: white;
+    border-radius: 5%;
+    border: none;
+    width:50%;
+    padding: 1em;
+    margin: 2em;
+}
+
+.test {
+    padding-top: 2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.testP {
+    padding: 0 3em;
+    text-align: justify;
+    line-height: 1.2em;
+}
+
+.name {
+    font-size: 1em;
+    text-align: right;
+    padding: 0 3em;
+}
+
+.outcome {
+    font-size: 0.8em;
+    font-weight: 700;
+    text-align: center;
+    padding: 0 3em;
+}
