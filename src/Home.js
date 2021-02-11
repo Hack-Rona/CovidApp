@@ -13,7 +13,9 @@ function Home(props) {
   return (
     <div>
       <Navie path="/navbar" component={Navie} />
-      <Carousel slides={CarouselData} />
+      <div>
+        <Carousel slides={CarouselData} />
+      </div>
       <div className="imgContainer">
         <img src={womanClipboard} className="ladyImage" />
         <div className="info">

@@ -21,8 +21,8 @@ function VolunteerConfirmation() {
         <p>Thank you!!!</p>
       </div>
       <div>
-        <h3 className="underline">Recipient Details</h3>
-        <table>
+        <h3 className="centered">Recipient Details</h3>
+        <table className="centered">
           <tbody>
             <tr>
               <td>Name:</td>
@@ -50,8 +50,8 @@ function VolunteerConfirmation() {
             </tr>
           </tbody>
         </table>
-        <h3>What they asked for:</h3>
-        <p>I need help setting up a vaccination</p>
+        <h3 className="centered">What they asked for:</h3>
+        <p className="centered">I need help setting up a vaccination</p>
       </div>
       <Footer path="/footer" component={Footer} />
     </div>
