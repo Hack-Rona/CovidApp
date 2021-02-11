@@ -1,14 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .arrow {
-    width: 3em;
-    float: right;
+	width: 3em;
+	float: right;
+	margin: 0 1em;
 }
 
 .foot {
-    background-color: #e0ca3c;
-    display: inline-block;
-    width: 100%;
+	background-color: rgb(226, 226, 29);
+	display: inline-block;
+	width: 100%;
 }
 
 .logo {
-    align-items: left;
+	float: left;
+	padding: 0.8em 0.5em 1em;
+	margin: .6em;
+	color: black;
+}
+
+.top {
+	background-color: rgb(226, 226, 29);
+	float: right;
+	padding: 0 1em;
+	color: black;
 }

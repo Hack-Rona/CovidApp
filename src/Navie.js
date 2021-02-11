@@ -5,7 +5,7 @@ import logo from './images/COVAIDLogo.png';
 
 function Navie() {
 	return (
-		<div className='top'>
+		<div className='top' id='topper'>
 			<Navbar expand='lg'>
 				<Navbar.Brand href='#home'>
 					<img src={logo} />

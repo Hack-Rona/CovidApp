@@ -40,6 +40,7 @@ function Home(props) {
           me. I needed help on all these different sites."
         </h5>
 
+<<<<<<< HEAD
         <p className="name">-Susan R.</p>
         <br />
         <p className="outcome">
@@ -50,6 +51,48 @@ function Home(props) {
       <Footer path="/footer" component={Footer} />
     </div>
   );
+=======
+	return (
+		<div>
+			<Navie path='/navbar' component={Navie} />
+			<Carousel slides={CarouselData} />
+			<div className='imgContainer'>
+				<img src={womanClipboard} className='ladyImage' />
+				<div className='info'>
+					<h5>
+						Over 44 million vaccine doses have been administered so far, so
+						what's stopping you?
+					</h5>
+				</div>
+				<div className='linkDiv'>
+					<button className='linkButton1' href='/senior'>
+						I need help with vaccine registration
+					</button>
+					<br />
+					<button className='linkButton2' href='/volunteer'>
+						I want to volunteer
+					</button>
+				</div>
+			</div>
+			<div>
+				<h5 className='test'>Testimonials</h5>
+				<br />
+				<h5 className='testP'>
+					"I couldn't sit through all the information that my doctor was giving
+					me. I needed help on all these different sites."
+				</h5>
+
+				<p className='name'>-Susan R.</p>
+				<br />
+				<p className='outcome'>
+					Susan received help setting up her appointment for her vaccine. Her
+					volunteer was Maria L.
+				</p>
+			</div>
+			<Footer path='/footer' component={Footer}/>
+		</div>
+	);
+>>>>>>> 0661dac192ce2c3b02cc05cca77cfa9a5afca3a2
 }
 
 export default Home;
