@@ -1,7 +1,7 @@
 import React from 'react';
 import { Navbar, Nav } from 'react-bootstrap';
 import './Navie.css';
-import logo from './COVAIDLogo.png';
+import logo from './images/COVAIDLogo.png';
 
 function Navie() {
 	return (

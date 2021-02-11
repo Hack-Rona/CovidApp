@@ -10,14 +10,17 @@
 }
 
 .top-panel {
+	flex: auto;
 	background-color: #87bcde;
 }
 
 .middle-panel {
+	flex: auto;
 	background-color: white;
 }
 
 .bottom-panel {
+	flex: auto;
 	background-color: #87bcde;
 }
 
@@ -25,3 +28,14 @@
 	max-width: 200px;
 	max-height: 200px;
 }
+
+p {
+	text-align: center;
+}
+
+img {
+	width: 60%;
+	margin: auto;
+	display: block;
+}
+
