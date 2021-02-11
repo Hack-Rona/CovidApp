@@ -6,6 +6,7 @@ import './Volunteer.css';
 import worksvolunteer from './images/howthisworksvolunteer.svg'
 import fillform from './images/fillformbelow.svg';
 import allset from './images/allsetman.svg';
+import Footer from './Footer'
 
 function Volunteer(props) {
 	const [error, setError] = useState(false);
@@ -623,11 +624,13 @@ function Volunteer(props) {
 						<br />
 					</div>
 
-					<Button variant='primary' type='submit'>
+					<button className='button' type='submit'>
 						Submit
-					</Button>
+					</button>
 				</Form>
 			</Container>
+			<br></br>
+			<Footer path='/footer' component={Footer} />
 		</div>
 	);
 }
