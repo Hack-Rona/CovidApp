@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { CarouselData } from "./CarouselData";
+import CarouselData from "./CarouselData";
 import { FaArrowAltCircleRight, FaArrowAltCircleLeft } from "react-icons/fa";
 
 const Carousel = ({ slides }) => {
