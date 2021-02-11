@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Component } from "react";
 import { Button } from "react-bootstrap";
-import { Carousel } from "./components/Carousel";
-import { CarouselData } from "./components/CarouselData";
+import Carousel from "./components/Carousel";
+import CarouselData from "./components/CarouselData";
 import "./components/Carousel.css";
 
 function Home(props) {
