@@ -18,6 +18,7 @@ function VolunteerConfirmation() {
         </p>
         <p>Thank you!!!</p>
       </div>
+      <RecipientDetail />
       <Footer path="/footer" component={Footer} />
     </div>
   );

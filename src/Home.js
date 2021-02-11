@@ -41,6 +41,7 @@ function Home(props) {
         </h5>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
         <p className="name">-Susan R.</p>
         <br />
         <p className="outcome">
@@ -52,6 +53,8 @@ function Home(props) {
     </div>
   );
 =======
+=======
+>>>>>>> e101e642653ab5fe9601a7928096ed42d1170a8c
 	return (
 		<div>
 			<Navie path='/navbar' component={Navie} />
@@ -92,7 +95,10 @@ function Home(props) {
 			<Footer path='/footer' component={Footer}/>
 		</div>
 	);
+<<<<<<< HEAD
 >>>>>>> 0661dac192ce2c3b02cc05cca77cfa9a5afca3a2
+=======
+>>>>>>> e101e642653ab5fe9601a7928096ed42d1170a8c
 }
 
 export default Home;
