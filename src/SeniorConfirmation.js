@@ -11,7 +11,7 @@ function SeniorConfirmation() {
 				<img src={helpconfirm}></img>
 				<h2>Thank you for the submission!</h2>
 				<p>
-					Our volunteer will reach you within 1-3 business days by your
+					Please reach out to the volunteer below within 1-3 business days by your
 					preferred method of contact.
 				</p>
 			</div>
