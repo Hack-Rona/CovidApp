@@ -4,12 +4,14 @@ import './Footer.css';
 
 function Footer() {
     return (
-        <footer className='foot'>
-            <p>COV-AID</p>
-            <img src={arrow} className='arrow' alt='up arrow'/>
-            <p className='arrow'>Top</p>
-        </footer>
-    );
+			<div className='foot'>
+				<p className='logo'>COV-AID</p>
+				<img src={arrow} className='arrow' alt='up arrow' />
+				<br />
+				<br />
+				<p className='top'>Top</p>
+			</div>
+		);
 }
 
 export default Footer;
