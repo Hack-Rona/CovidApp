@@ -1,6 +1,7 @@
 import React from 'react';
 import arrow from './images/upArrow.svg';
 import './Footer.css';
+import logo from './images/COVAIDLogo.png';
 
 function Footer() {
     return (

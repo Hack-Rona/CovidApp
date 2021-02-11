@@ -67,6 +67,7 @@ function Volunteer(props) {
 			<Container>
 				<Navie path='/navbar' component={Navie} />
 				<div className='top-panel'>
+					<br></br>
 					<h2>How this works</h2>
 					<img className='panel-image' src={worksvolunteer}></img>
 					<p>
