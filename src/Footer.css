@@ -1,7 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .arrow {
 	width: 3em;
 	float: right;
-    
+	margin: 0 1em;
 }
 
 .foot {
@@ -12,11 +16,14 @@
 
 .logo {
 	float: left;
-	padding: 0.8em 0.5em 0;
+	padding: 0.8em 0.5em 1em;
+	margin: .6em;
+	color: black;
 }
 
 .top {
 	background-color: rgb(226, 226, 29);
 	float: right;
-	padding: 0 0.3em;
+	padding: 0 1em;
+	color: black;
 }
