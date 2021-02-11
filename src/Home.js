@@ -16,7 +16,7 @@ function Home(props) {
 			<Navie path='/navbar' component={Navie} />
 			<Carousel slides={CarouselData} />
 			<div className='imgContainer'>
-				<img src={womanClipboard} className='image' />
+				<img src={womanClipboard} className='ladyImage' />
 				<div className='info'>
 					<h5>
 						Over 44 million vaccine doses have been administered so far, so
