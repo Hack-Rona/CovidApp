@@ -6,6 +6,7 @@ import './Volunteer.css';
 import worksvolunteer from './images/howthisworksvolunteer.svg'
 import fillform from './images/fillformbelow.svg';
 import allset from './images/allsetman.svg';
+import Footer from './Footer'
 
 function Volunteer(props) {
 	const [error, setError] = useState(false);
@@ -64,8 +65,9 @@ function Volunteer(props) {
 
 	return (
 		<div>
-			<Container>
+			<div>
 				<Navie path='/navbar' component={Navie} />
+			</div>
 				<div className='top-panel'>
 					<br></br>
 					<h2>How this works</h2>
@@ -82,6 +84,7 @@ function Volunteer(props) {
 					<img className='panel-image' src={allset}></img>
 					<p>All set! Someone will be in touch in 1 to 3 days.</p>
 				</div>
+			<Container>
 				<br></br>
 				<h2>Volunteer Form</h2>
 				<h6>This information will be kept confidential</h6>
@@ -623,11 +626,13 @@ function Volunteer(props) {
 						<br />
 					</div>
 
-					<Button variant='primary' type='submit'>
+					<button className='button' type='submit'>
 						Submit
-					</Button>
+					</button>
 				</Form>
 			</Container>
+			<br></br>
+			<Footer path='/footer' component={Footer} />
 		</div>
 	);
 }
