@@ -56,12 +56,12 @@ function Volunteer(props) {
 				console.log('Success:', response);
 				setVolunteer(response);
 				console.log(response);
-				window.location = '/seniorconfirmation';
+				window.location = '/volunteerconfirmation';
 			})
 			.catch(() => {
 				console.log('Error:', error);
 				setError(true);
-				window.location = '/seniorconfirmation';
+				window.location = '/volunteerconfirmation';
 			});
 	};
 
