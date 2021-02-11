@@ -65,8 +65,9 @@ function Volunteer(props) {
 
 	return (
 		<div>
-			<Container>
+			<div>
 				<Navie path='/navbar' component={Navie} />
+			</div>
 				<div className='top-panel'>
 					<br></br>
 					<h2>How this works</h2>
@@ -83,6 +84,7 @@ function Volunteer(props) {
 					<img className='panel-image' src={allset}></img>
 					<p>All set! Someone will be in touch in 1 to 3 days.</p>
 				</div>
+			<Container>
 				<br></br>
 				<h2>Volunteer Form</h2>
 				<h6>This information will be kept confidential</h6>
