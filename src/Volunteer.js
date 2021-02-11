@@ -17,10 +17,10 @@ function Volunteer(props) {
 		zipCode: '',
 		phoneNumber: '',
 		email: '',
-		helpNum: '',
-		vaccinated: '',
-		testDate: '',
-		okInPerson: '',
+		cap: '',
+		vacc: '',
+		date: '',
+		inperson: '',
 	});
 
 	const handleChange = (event) => {
@@ -31,35 +31,37 @@ function Volunteer(props) {
 		});
 	};
 
-	const handleSelect = (event) => {
-		setVolunteer({
-			...volunteer,
-			[event]: event.eventKey,
-		});
-		console.log(event);
-	};
+	// const handleSelect = (event) => {
+	// 	setVolunteer({
+	// 		...volunteer,
+	// 		[event]: event.eventKey,
+	// 	});
+	// 	console.log(event);
+	// };
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
-		const url = `${APIURL}volunteer/`;
+		const url = `${APIURL}volunteers/`;
 
 		fetch(url, {
 			method: 'POST',
-			mode: 'cors',
+			mode: 'no-cors',
 			headers: {
 				'Content-type': 'application/json; charset=UTF-8',
 			},
 			body: JSON.stringify(volunteer),
 		})
 			.then((response) => response.json())
-			.then((volunteer) => {
-				console.log('Success:', volunteer);
-				setVolunteer(volunteer);
-				console.log(volunteer);
+			.then((response) => {
+				console.log('Success:', response);
+				setVolunteer(response);
+				console.log(response);
+				window.location = '/seniorconfirmation';
 			})
 			.catch(() => {
 				console.log('Error:', error);
 				setError(true);
+				window.location = '/seniorconfirmation';
 			});
 	};
 
@@ -68,22 +70,22 @@ function Volunteer(props) {
 			<div>
 				<Navie path='/navbar' component={Navie} />
 			</div>
-				<div className='top-panel'>
-					<br></br>
-					<h2>How this works</h2>
-					<img className='panel-image' src={worksvolunteer}></img>
-					<p>
-						You have the desire to help your community by becoming a volunteer.
-					</p>
-				</div>
-				<div className='panel-image' className='middle-panel'>
-					<img src={fillform}></img>
-					<p>Fill the form below to get started.</p>
-				</div>
-				<div className='bottom-panel'>
-					<img className='panel-image' src={allset}></img>
-					<p>All set! Someone will be in touch in 1 to 3 days.</p>
-				</div>
+			<div className='top-panel'>
+				<br></br>
+				<h2>How this works</h2>
+				<img className='panel-image' src={worksvolunteer}></img>
+				<p>
+					You have the desire to help your community by becoming a volunteer.
+				</p>
+			</div>
+			<div className='panel-image' className='middle-panel'>
+				<img src={fillform}></img>
+				<p>Fill the form below to get started.</p>
+			</div>
+			<div className='bottom-panel'>
+				<img className='panel-image' src={allset}></img>
+				<p>All set! Someone will be in touch in 1 to 3 days.</p>
+			</div>
 			<Container>
 				<br></br>
 				<h2>Volunteer Form</h2>
@@ -109,12 +111,24 @@ function Volunteer(props) {
 						/>
 					</Form.Group>
 
-					<Dropdown>
+					<Form.Group controlId='state'>
+						<Form.Label>State</Form.Label>
+						<Form.Control
+							type='state'
+							name='state'
+							placeholder='Enter State'
+							onChange={handleChange}
+						/>
+					</Form.Group>
+
+					{/* <Dropdown>
 						<Form.Label>State</Form.Label>
 						<br />
 						<Dropdown.Toggle></Dropdown.Toggle>
 
-						<Dropdown.Menu style={{ maxHeight: '20em', overflowY: 'scroll' }}>
+						<Dropdown.Menu
+							onSelect={handleSelect}
+							style={{ maxHeight: '20em', overflowY: 'scroll' }}>
 							<Dropdown.Item
 								eventKey='AL'
 								type='state'
@@ -473,23 +487,23 @@ function Volunteer(props) {
 								WY
 							</Dropdown.Item>
 						</Dropdown.Menu>
-					</Dropdown>
-					<h5>State selected: {volunteer.state}</h5>
-					<Form.Group controlId='zip'>
+					</Dropdown> */}
+
+					<Form.Group controlId='zipCode'>
 						<Form.Label>Zip Code</Form.Label>
 						<Form.Control
-							type='zip'
-							name='zip'
+							type='zipCode'
+							name='zipCode'
 							placeholder='Zip Code'
 							onChange={handleChange}
 						/>
 					</Form.Group>
 
-					<Form.Group controlId='phone'>
+					<Form.Group controlId='phoneNumber'>
 						<Form.Label>Phone Number</Form.Label>
 						<Form.Control
-							type='phone'
-							name='phone'
+							type='phoneNumber'
+							name='phoneNumber'
 							placeholder='Phone Number'
 							onChange={handleChange}
 						/>
@@ -505,112 +519,124 @@ function Volunteer(props) {
 						/>
 					</Form.Group>
 
-					<Dropdown>
+					{/* <Dropdown>
 						<Form.Label>
 							How many people do you want to help per week?
 						</Form.Label>
 						<br />
 						<Dropdown.Toggle></Dropdown.Toggle>
 
-						<Dropdown.Menu style={{ maxHeight: '20em', overflowY: 'scroll' }}>
+						<Dropdown.Menu
+							onSelect={handleSelect}
+							style={{ maxHeight: '20em', overflowY: 'scroll' }}>
 							<Dropdown.Item
 								eventKey='1'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								1
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='2'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								2
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='3'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								3
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='4'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								4
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='5'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								5
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='6'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								6
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='7'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								7
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='8'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								8
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='9'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								9
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='10'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								10
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey='10+'
-								type='helpNum'
-								name='helpNum'
+								type='cap'
+								name='cap'
 								onSelect={handleSelect}>
 								10+
 							</Dropdown.Item>
 						</Dropdown.Menu>
-					</Dropdown>
+					</Dropdown> */}
+					<Form.Group controlId='cap'>
+						<Form.Label>Number of people you are willing to help per week</Form.Label>
+						<Form.Control
+							type='cap'
+							name='cap'
+							placeholder='Number per week'
+							onChange={handleChange}
+						/>
+					</Form.Group>
+
 					<br />
 
 					<h6>Have you been vaccinated?</h6>
 					<div onChange={handleChange}>
-						<input type='radio' id='no' name='vaccinated' value='no' />
-						<label htmlFor='no'>No</label>
+						<input type='radio' id='false' name='vacc' value='false' />
+						<label htmlFor='false'>No</label>
 						<br />
-						<input type='radio' id='yes' name='vaccinated' value='yes' />
-						<label htmlFor='yes'>Yes</label>
+						<input type='radio' id='true' name='vacc' value='true' />
+						<label htmlFor='true'>Yes</label>
 						<br />
 					</div>
 
-					<Form.Group controlId='testDate'>
+					<Form.Group controlId='date'>
 						<Form.Label>
 							When was the date of your last COVID testing?
 						</Form.Label>
 						<Form.Control
-							type='testDate'
-							name='testDate'
+							type='date'
+							name='date'
 							placeholder='Date of Test'
 							onChange={handleChange}
 						/>
@@ -618,11 +644,11 @@ function Volunteer(props) {
 
 					<h6>Would you be comfortable doing an in-person volunteer?</h6>
 					<div onChange={handleChange}>
-						<input type='radio' id='no' name='okInPerson' value='no' />
-						<label htmlFor='no'>No</label>
+						<input type='radio' id='false' name='inperson' value='false' />
+						<label htmlFor='false'>No</label>
 						<br />
-						<input type='radio' id='yes' name='okInPerson' value='yes' />
-						<label htmlFor='yes'>Yes</label>
+						<input type='radio' id='true' name='inperson' value='true' />
+						<label htmlFor='true'>Yes</label>
 						<br />
 					</div>
 
