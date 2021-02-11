@@ -1,0 +1,10 @@
+.arrow {
+    width: 3em;
+    float: right;
+}
+
+.foot {
+    background-color: yellow;
+    display: inline-block;
+    width: 100%;
+}
